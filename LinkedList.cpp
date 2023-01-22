@@ -23,18 +23,14 @@ void LinkedList::insert(int num1)
 void LinkedList::deletion(int num1)
 {
 	Node* curr = this->head;
-	int i = 1;
-	while (curr)
+
+	if (curr->data = num1)
 	{
-		if (curr->data = num1)
-		{
-			curr->previous = curr->next;
-		}
-		else 
-		{
-			curr = curr->next;
-			i++;
-		}
+		curr->previous = curr->next;
+	}
+	else
+	{
+		curr = curr->next;
 	}
 }
 

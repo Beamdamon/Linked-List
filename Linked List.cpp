@@ -10,7 +10,7 @@ int main()
 	LinkedList list;
 
 	int choice;
-	int data;
+	int num1;
 	bool exit = false;
 
 	while (!exit)
@@ -45,8 +45,9 @@ int main()
 		}
 		case 4:
 		{
-			cin >> data;
-			list.deletion(data);
+			cin >> num1;
+			list.deletion(num1);
+			list.display();
 		}
 		default:
 		{
