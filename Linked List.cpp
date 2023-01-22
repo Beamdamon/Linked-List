@@ -2,6 +2,7 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "node.h"
+
 using namespace std;
 
 int main()
@@ -13,6 +14,7 @@ int main()
 	int num1;
 	bool exit = false;
 
+	// Main display for the linked list
 	while (!exit)
 	{
 		std::cout << "Menu" << endl;
@@ -45,9 +47,18 @@ int main()
 		}
 		case 4:
 		{
-			cin >> num1;
-			list.deletion(num1);
-			list.display();
+			Node* root = new Node(1);
+			root->previous = new Node(2);
+			root->next = new Node(3);
+			root->previous->previous = new Node(4);
+			root->previous->next = new Node(5);
+
+			list.deleteTree(root);
+			root = NULL;
+
+			cout << "\n Tree deleted ";
+
+			return 0;
 		}
 		default:
 		{

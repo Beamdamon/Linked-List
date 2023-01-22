@@ -10,9 +10,10 @@ LinkedList::LinkedList()
 	head = NULL;
 }
 
+//Inserting the Linked List
 void LinkedList::insert(int num1)
 {
-	Node* node = new Node();
+	Node* node = new Node(num1);
 	node->data = num1;
 	node->next = head;
 	head = node;
@@ -20,20 +21,20 @@ void LinkedList::insert(int num1)
 	length++;
 }
 
-void LinkedList::deletion(int num1)
+//Deleting the Linked List
+void LinkedList::deleteTree(Node* node)
 {
-	Node* curr = this->head;
+	if (node == NULL) return;
 
-	if (curr->data = num1)
-	{
-		curr->previous = curr->next;
-	}
-	else
-	{
-		curr = curr->next;
-	}
+	deleteTree(node->previous);
+	deleteTree(node->next);
+
+	cout << "Deleting node: " << node->data;
+	delete node;
+
 }
 
+//Displaying the Linked List
 void LinkedList::display() 
 {
 	Node* curr = this->head;
@@ -46,6 +47,8 @@ void LinkedList::display()
 	}
 
 }
+
+//Gives the length of the Linked List
 int LinkedList::getLength()
 {
 	return length;

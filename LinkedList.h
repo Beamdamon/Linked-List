@@ -10,7 +10,7 @@ private:
 public:
 	LinkedList();
 	void insert(int data);
-	void deletion(int data);
+	void deleteTree(Node* node);
 	void display();
 	int getLength();
 };
