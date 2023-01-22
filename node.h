@@ -1,7 +1,7 @@
 #pragma once
-class node
+class Node
 {
 public:
 	int data;
-	node* next;
+	Node* next;
 };
