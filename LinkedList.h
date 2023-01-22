@@ -11,6 +11,5 @@ public:
 	LinkedList();
 	void insert(int data);
 	void display();
-	int getLength;
-
+	int getLength();
 };
