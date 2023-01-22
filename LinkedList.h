@@ -10,6 +10,7 @@ private:
 public:
 	LinkedList();
 	void insert(int data);
+	void deletion(int data);
 	void display();
 	int getLength();
 };
